@@ -12,7 +12,7 @@ function App() {
   const API = "http://localhost:3000/pizzas";
 
   const [pizzas, setPizzas] = useState([]);
-  
+
   const [toppings, setToppings] = useState([]);
   const [type, setType] = useState("");
   const [image, setImage] = useState("");
@@ -30,7 +30,7 @@ function App() {
       <div className="spacer"></div>
       <div className="content">
       <PizzaBuilder toppings={toppings} type={type} image={image} />
-      <Options />
+      <Options toppings={toppings} setToppings={setToppings}/>
       </div>
         <Menu setToppings={setToppings} setType={setType} setImage={setImage}
           pizzas = {pizzas}
