@@ -1,0 +1,15 @@
+{
+    "pizzas":
+    [{
+        "id": 1,
+        "type": "plain",
+        "toppings": ["cheese"],
+        "image": "./assets/pies/plain.png"
+    },
+    {
+        "id": 2,
+        "type": "pepperoni",
+        "toppings": ["cheese", "pepperoni"],
+        "image": "./assets/pies/pepperoni.png"
+    }]
+}
