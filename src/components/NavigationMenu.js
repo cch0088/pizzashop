@@ -13,9 +13,7 @@ function NavigationMenu() {
         </ul>
       </div>
     </div>
- 
   )
 }
 
 export default NavigationMenu;
-

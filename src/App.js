@@ -1,11 +1,11 @@
 import './App.css';
 import PizzaBuilder from './components/PizzaBuilder';
 import { useEffect, useState } from 'react';
+import background from "./backgroundPic.png";
 import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
 import Menu from './components/Menu';
 import Options from './components/Options';
-
 
 function App() {
 
@@ -20,10 +20,10 @@ function App() {
   },[])
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${background})`}}>
       <Heading/>
       <NavigationMenu/>
-      <div className="spacer">Blank space</div>
+      <div className="spacer"></div>
       <div className="content">
       <PizzaBuilder pizzas={pizzas} />
       <Options />
@@ -33,6 +33,7 @@ function App() {
           setPizzas={setPizzas}
         />
         <div className="footer">Footer</div>  
+        <div className="bottom"></div>
     </div>
   );
 }
