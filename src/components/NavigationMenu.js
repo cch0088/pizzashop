@@ -5,7 +5,7 @@ function NavigationMenu() {
 
 
   return (
-    <></>
+    <div className="navigation"></div>
   )
 }
 
