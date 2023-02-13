@@ -6,6 +6,23 @@ import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
 import Menu from './components/Menu';
 import Options from './components/Options';
+import {createGlobalStyle} from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+`
 
 function App() {
 
@@ -21,6 +38,7 @@ function App() {
 
   return (
     <div className="App" style={{ backgroundImage: `url(${background})`}}>
+      <createGlobalStyle />
       <Heading/>
       <NavigationMenu/>
       <div className="spacer"></div>
