@@ -23,7 +23,7 @@ function App() {
     <div className="App" style={{ backgroundImage: `url(${background})`}}>
       <Heading/>
       <NavigationMenu/>
-      <div className="spacer">Blank space</div>
+      <div className="spacer"></div>
       <div className="content">
       <PizzaBuilder pizzas={pizzas} />
       <Options />
@@ -33,6 +33,7 @@ function App() {
           setPizzas={setPizzas}
         />
         <div className="footer">Footer</div>  
+        <div className="bottom"></div>
     </div>
   );
 }
