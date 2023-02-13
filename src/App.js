@@ -13,7 +13,7 @@ function App() {
   },[])
 
   return (
-    <div>
+    <div className="App">
       <PizzaBuilder pizzas={pizzas} />
     </div>
   );
