@@ -1,17 +1,15 @@
 import React from 'react';
 
-function Options({toppings, setToppings}) {
-
-  console.log(toppings);
+function Options({toppings, setToppings, allToppings, setAllToppings}) {
 
   return (
     <div>
     <div>Select Toppings</div>
     <div className="options">
-      <div><input type="checkbox" id="pepperoni" />Pepperoni</div>
-      <div><input type="checkbox" id="olives" />Olives</div>
-      <div><input type="checkbox" id="meatball" />Meatball</div>
-      <div><input type="checkbox" id="mushroom" />Mushroom</div>
+      {allToppings.map(t => 
+        {
+          return (<div key={t.id}><input type="checkbox"></input>{t.topping.charAt(0).toUpperCase() + t.topping.slice(1)}</div>);
+        })}
     </div>
     <div><button>Check Out</button></div>
     </div>
