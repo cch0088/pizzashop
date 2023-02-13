@@ -43,5 +43,33 @@
         "type": "pepperoni",
         "toppings": ["cheese", "pepperoni"],
         "image": "./assets/pies/pepperoni.png"
-    }]
-}
+    }],
+
+    "toppings": 
+    [{
+        "id": 1,
+        "topping": "cheese",
+        "image": ""
+    },
+    {
+        "id": 2,
+        "topping": "pepperoni",
+        "image": ""
+
+    },
+    {
+        "id": 3,
+        "topping": "olives",
+        "image": ""
+    },
+    {
+        "id": 4,
+        "topping": "meatball",
+        "image": ""
+    },
+    {
+        "id": 5,
+        "topping": "mushroom",
+        "image": ""
+    }
+]}
