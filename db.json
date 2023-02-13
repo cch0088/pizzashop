@@ -11,6 +11,24 @@
         "type": "pepperoni",
         "toppings": ["cheese", "pepperoni"],
         "image": "./assets/pies/pepperoni.png"
+    },
+    {
+        "id": 3,
+        "type": "olives",
+        "toppings": ["cheese, olives"],
+        "image": ""
+    },
+    {
+        "id": 4,
+        "type": "meatball",
+        "toppings": ["cheese, meatball"],
+        "image": ""
+    },
+    {
+        "id": 5,
+        "type": "mushroom",
+        "toppings": ["cheese, mushroom"],
+        "image": ""
     }],
 
     "orders":
