@@ -30,6 +30,10 @@ function App() {
 
   const [pizzas, setPizzas] = useState([]);
 
+  const [toppings, setToppings] = useState([]);
+  const [type, setType] = useState("");
+  const [image, setImage] = useState("");
+
   useEffect(() => {
     fetch(API)
     .then(r => r.json())
@@ -43,10 +47,10 @@ function App() {
       <NavigationMenu/>
       <div className="spacer"></div>
       <div className="content">
-      <PizzaBuilder />
-      <Options />
+      <PizzaBuilder toppings={toppings} type={type} image={image} />
+      <Options toppings={toppings} setToppings={setToppings}/>
       </div>
-        <Menu
+        <Menu setToppings={setToppings} setType={setType} setImage={setImage}
           pizzas = {pizzas}
           setPizzas={setPizzas}
         />

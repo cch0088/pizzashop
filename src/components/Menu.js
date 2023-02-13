@@ -2,7 +2,7 @@
 import React from 'react';
 import Pizza from "./Pizza"
 
-function Menu({pizzas, setPizzas}) {
+function Menu({pizzas, setToppings, setType, setImage}) {
 
   return (
     <div className="lower-content">
@@ -11,7 +11,7 @@ function Menu({pizzas, setPizzas}) {
         {pizzas.map(pizza => {
             return <Pizza
             key={pizza.id}
-            {...pizza}
+            {...pizza} setToppings={setToppings} setType={setType} setImage={setImage}
             />
         })}
     </div>
