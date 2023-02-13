@@ -25,7 +25,7 @@ function App() {
       <NavigationMenu/>
       <div className="spacer"></div>
       <div className="content">
-      <PizzaBuilder pizzas={pizzas} />
+      <PizzaBuilder />
       <Options />
       </div>
         <Menu
