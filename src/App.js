@@ -184,8 +184,10 @@ body {
 function App() {
 
   const API = "http://localhost:3000/pizzas";
+  const API_T = "http://localhost:3000/toppings";
 
   const [pizzas, setPizzas] = useState([]);
+  const [allToppings, setAllToppings] = useState([]);
 
   const [toppings, setToppings] = useState([]);
   const [type, setType] = useState("");
@@ -197,35 +199,34 @@ function App() {
     .then(p => setPizzas(p));
   },[])
 
+  useEffect(() => {
+    fetch(API_T)
+    .then(r => r.json())
+    .then(t => setAllToppings(t));
+  },[])
+
   return (
     <Switch>
     <div className="App" style={{ backgroundImage: `url(${background})`}}>
-      <Route>
         <GlobalStyle />
-      </Route>
-      <Route>
           <Heading/>
-      </Route>
-      <Route>
           <NavBar />
-      </Route>
-      <Route>
-          <NavigationMenu path="/navigationmenu"/>
-      </Route>
       <div className="spacer"></div>
       <div className="content">
-      <Route>
-      <PizzaBuilder toppings={toppings} type={type} image={image} />
-      <Options toppings={toppings} setToppings={setToppings} allToppings={allToppings} setAllToppings={setAllToppings}/>
-      </div>
-        <Menu setToppings={setToppings} setType={setType} setImage={setImage}
-          pizzas = {pizzas}
-          setPizzas={setPizzas}
-        />
+      <Route path="/about">
+          <NavigationMenu />
       </Route>
-        <div className="footer">Footer</div>  
-        <div className="bottom"></div>
-    </div>
+        <Route path="/options">
+            <PizzaBuilder toppings={toppings} type={type} image={image} />
+            <Options toppings={toppings} setToppings={setToppings} allToppings={allToppings} setAllToppings={setAllToppings}/>
+            <Menu setToppings={setToppings} setType={setType} setImage={setImage}
+              pizzas = {pizzas}
+              setPizzas={setPizzas} />
+        </Route>
+      </div>
+      <div className="footer">Footer</div>  
+      <div className="bottom"></div>
+      </div>
   </Switch>
   );
 }
