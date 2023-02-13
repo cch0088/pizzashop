@@ -187,6 +187,10 @@ function App() {
 
   const [pizzas, setPizzas] = useState([]);
 
+  const [toppings, setToppings] = useState([]);
+  const [type, setType] = useState("");
+  const [image, setImage] = useState("");
+
   useEffect(() => {
     fetch(API)
     .then(r => r.json())
@@ -211,18 +215,14 @@ function App() {
       <div className="spacer"></div>
       <div className="content">
       <Route>
-          <PizzaBuilder path="/pizzabuilder"/>
-      </Route>
-      <Route>
-          <Options path="/options"/>
-      </Route>
+      <PizzaBuilder toppings={toppings} type={type} image={image} />
+      <Options toppings={toppings} setToppings={setToppings} allToppings={allToppings} setAllToppings={setAllToppings}/>
       </div>
-      <Route>
-          <Menu path="/menu"
+        <Menu setToppings={setToppings} setType={setType} setImage={setImage}
           pizzas = {pizzas}
           setPizzas={setPizzas}
-          />
-        </Route>
+        />
+      </Route>
         <div className="footer">Footer</div>  
         <div className="bottom"></div>
     </div>

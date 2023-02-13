@@ -1,8 +1,9 @@
 import React from 'react';
-function PizzaBuilder() {
+function PizzaBuilder({toppings, type, image}) {
+
     return (
             <div className="picture">
-                <img className="pizza-display" src="./assets/pies/plain.png" alt="Pizza" />
+                <img className="pizza-display" src={image} alt={type} />
             </div>
     );
 }

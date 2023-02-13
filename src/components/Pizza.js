@@ -1,10 +1,11 @@
 import React from "react";
-import PizzaBuilder from "./PizzaBuilder";
 
-function Pizza({toppings, image, type}) {
+function Pizza({toppings, image, type, setToppings, setType, setImage}) {
 
     const handleClick = (e) => {
-        console.log(type, image, toppings);
+        setToppings(toppings);
+        setType(type);
+        setImage(image);
     }
 
     return(
