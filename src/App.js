@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
 import Menu from './components/Menu';
+import Options from './components/Options';
 
 
 function App() {
@@ -23,7 +24,10 @@ function App() {
       <Heading/>
       <NavigationMenu/>
       <div className="spacer">Blank space</div>
+      <div className="content">
       <PizzaBuilder pizzas={pizzas} />
+      <Options />
+      </div>
         <Menu
           pizzas = {pizzas}
           setPizzas={setPizzas}
