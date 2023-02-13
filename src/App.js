@@ -14,7 +14,8 @@ function App() {
 
   return (
     <div className="App">
-      <PizzaBuilder pizzas={pizzas} />
+      {console.log(pizzas)}
+      <PizzaBuilder />
     </div>
   );
 }
