@@ -12,6 +12,10 @@ function App() {
   const API = "http://localhost:3000/pizzas";
 
   const [pizzas, setPizzas] = useState([]);
+  
+  const [toppings, setToppings] = useState([]);
+  const [type, setType] = useState("");
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     fetch(API)
@@ -25,10 +29,10 @@ function App() {
       <NavigationMenu/>
       <div className="spacer"></div>
       <div className="content">
-      <PizzaBuilder />
+      <PizzaBuilder toppings={toppings} type={type} image={image} />
       <Options />
       </div>
-        <Menu
+        <Menu setToppings={setToppings} setType={setType} setImage={setImage}
           pizzas = {pizzas}
           setPizzas={setPizzas}
         />
