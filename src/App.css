@@ -126,15 +126,13 @@
 }
 
 .options {
-  height: 300px;
   width: 150px;
   border-width: 2px;
   border-color: black;
   border-style: solid;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: left;
 }
 
 .menuNav {
