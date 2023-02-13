@@ -1,16 +1,13 @@
-function PizzaBuilder ({pizzas}) {
 
-    return (<div>
-        <div className="heading">Heading</div>
-        <div className="navigation">Navigation Menu</div>
-        <div className="spacer">Blank space</div>
+import React from 'react';
+function PizzaBuilder() { 
+    return (
         <div className="content">
-            <div className="picture">Picture</div>
-            <div className="options">Options</div>
+        <div className="picture">
+            <img className="pizza-display" src="./assets/pies/plain.png" alt="Pizza" />
         </div>
-        <div className="lower-content">Lower Content</div>
-        <div className="footer">Footer</div>
-    </div>);
+        <div className="options">Options</div>
+        </div>
+    );
 }
-
 export default PizzaBuilder;
