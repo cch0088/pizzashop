@@ -4,8 +4,8 @@ function PizzaBuilder() {
         <div className="content">
             <div className="picture">
                 <img className="pizza-display" src="./assets/pies/plain.png" alt="Pizza" />
-                <div className="options">Options</div>
             </div>
+            <div className="options">Options</div>
         </div>
     );
 }
