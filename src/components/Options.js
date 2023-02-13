@@ -11,6 +11,7 @@ function Options() {
       <div><input type="checkbox" />Meatball</div>
       <div><input type="checkbox" />Mushroom</div>
     </div>
+    <div><button>Check Out</button></div>
     </div>
   )
 }
