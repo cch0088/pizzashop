@@ -92,7 +92,7 @@ body {
 
 .content {
   min-height: 450px;
-  background-color: rgba(255, 255, 255, 0.6);;
+  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -100,8 +100,8 @@ body {
 }
 
 .lower-content {
-  height: 100px;
-  background-color: white;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,7 +109,7 @@ body {
 }
 
 .spacer {
-  height: 50px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
