@@ -11,10 +11,21 @@ function PizzaBuilder({pizzas, allToppings, setAllToppings}) {
 
     return (
         <div>
-            <PizzaDisplay type={type} image={image} />
-            <Options toppings={toppings} setToppings={setToppings} allToppings={allToppings} setAllToppings={setAllToppings}/>
-            <Menu setToppings={setToppings} setType={setType} setImage={setImage} pizzas={pizzas} />
-        </div>    
+            <div className="content">
+                <PizzaDisplay type={type}
+                            image={image} />
+                <Options toppings={toppings}
+                        setToppings={setToppings}
+                        allToppings={allToppings}
+                        setAllToppings={setAllToppings} />
+            </div>
+            <div className="lower-content">
+                <Menu setToppings={setToppings}
+                    setType={setType}
+                    setImage={setImage} 
+                    pizzas={pizzas} />
+            </div>
+        </div>
     );
 }
 export default PizzaBuilder;

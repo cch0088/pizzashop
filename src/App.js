@@ -1,4 +1,4 @@
-import './App.css';
+//import './App.css';
 import PizzaBuilder from './components/PizzaBuilder';
 import { useEffect, useState } from 'react';
 import background from "./backgroundPic.png";
@@ -87,7 +87,7 @@ body {
 }
 
 .content {
-  min-height: 450px;
+  min-height: 350px;
   background-color: lightblue;
   display: flex;
   flex-direction: row;
@@ -201,23 +201,21 @@ function App() {
   },[])
 
   return (
-    <Switch>
-    <div className="App" style={{ backgroundImage: `url(${background})`}}>
+      <Switch>
+        <div className="App" style={{ backgroundImage: `url(${background})`}}>
         <GlobalStyle />
-          <Heading/>
-          <NavBar />
-      <div className="spacer"></div>
-      <div className="content">
-      <Route path="/about">
+        <Heading/>
+        <NavBar />
+        <div className="spacer"></div>
+        <Route path="/about">
           <NavigationMenu />
-      </Route>
-        <Route path="/options">
-            <PizzaBuilder pizzas={pizzas} allToppings={allToppings} setAllToppings={setAllToppings}/>
         </Route>
-      </div>
+        <Route path="/options">
+          <PizzaBuilder pizzas={pizzas} allToppings={allToppings} setAllToppings={setAllToppings}/>
+        </Route>
       <Footer />
       </div>
-  </Switch>
+      </Switch>
   );
 }
 
