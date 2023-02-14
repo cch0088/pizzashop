@@ -38,6 +38,7 @@ return(
         <NavLink to="/menu" exact style={linkStyles}>Menu</NavLink>
         <NavLink to="/options" exact style={linkStyles}>Builder</NavLink>
         <NavLink to="/about" exact style={linkStyles} activeStyle={{background: "white"}}>Contact</NavLink>
+        <NavLink to ='/orders' exact style={linkStyles}>Orders</NavLink>
      </div>
     )
 }
