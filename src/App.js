@@ -260,7 +260,7 @@ function App() {
           />
         </Route>
         <Route path="/menu">
-          <TopMenu pizzas= {pizzas} type={type} toppings={toppings} image={image}/>
+          <TopMenu pizzas={pizzas} />
         </Route>
 
       <Footer />

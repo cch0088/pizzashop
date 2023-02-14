@@ -23,23 +23,21 @@ function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders}) {
                             allToppings={allToppings} />
                 <Options toppings={toppings}
                         setToppings={setToppings}
-
                         allToppings={allToppings}
                         type={type}
+                        handleForm={handleForm} />
+                
+                        {showForm ? <Form
                         handleForm={handleForm}
-                        />
-                {showForm ? <Form
-                handleForm={handleForm}
-                showForm={showForm}
-                setShowForm={setShowForm} 
-                type={type}
-                setType={setType}
-                toppings={toppings}
-                setToppings={setToppings}
-                orders={orders}
-                setOrders={setOrders}
-                /> : null}       
-            </div>
+                        showForm={showForm}
+                        setShowForm={setShowForm} 
+                        type={type}
+                        setType={setType}
+                        toppings={toppings}
+                        setToppings={setToppings}
+                        orders={orders}
+                        setOrders={setOrders}
+                        /> : null}
             </div>)
             : (<div className="content">
                 <h1>Select Your Pizza</h1>
