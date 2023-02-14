@@ -6,19 +6,21 @@ import Menu from './Menu';
 function PizzaBuilder({pizzas, allToppings}) {
 
     const [toppings, setToppings] = useState([]);
-    const [type, setType] = useState("Select Your Pizza");
-    const [image, setImage] = useState("./assets/default.png");
+    const [type, setType] = useState("");
+    const [image, setImage] = useState("");
 
     return (
-        <div>
-            <div className="content">
-                <PizzaDisplay type={type}
-                            image={image} />
+        <div>{(type !== "")
+            ? (<div className="content">
+                <PizzaDisplay toppings={toppings}
+                            allToppings={allToppings} />
                 <Options toppings={toppings}
                         setToppings={setToppings}
-                        allToppings={allToppings}
-                        type={type} />
-            </div>
+                        allToppings={allToppings} />
+            </div>)
+            : (<div className="content">
+                <h1>Select Your Pizza</h1>
+            </div>)}
             <div className="lower-content">
                 <Menu setToppings={setToppings}
                     setType={setType}

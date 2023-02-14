@@ -160,7 +160,9 @@ body {
 }
 
 .pizza-display {
-  width: 100%;
+  width: 40%;
+  margin-right: 10%;
+  position: absolute;
 }
 
 .options {
