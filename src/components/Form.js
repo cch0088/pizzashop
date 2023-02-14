@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form({handleForm, showForm, setShowForm, type, setType, toppings, setToppings, setOrders}) {
+function Form({type, toppings, setOrders}) {
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -13,19 +13,16 @@ function Form({handleForm, showForm, setShowForm, type, setType, toppings, setTo
 
         fetch('http://localhost:3000/orders', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-                body: JSON.stringify(newPizzaOrder)
-        })
-        .then(r => r.json())
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newPizzaOrder)
+        }).then(r => r.json())
 
         setOrders(prev => [...prev, newPizzaOrder])
     }
     
     return (
     <div className="content">
-        <form onSubit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <h3>Checkout</h3>
             <label for="name">Name:</label>
             <input
@@ -67,6 +64,3 @@ function Form({handleForm, showForm, setShowForm, type, setType, toppings, setTo
 }
 
 export default Form;
-
-
-//div class content 

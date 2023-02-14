@@ -28,14 +28,8 @@ function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders}) {
                         handleForm={handleForm} />
                 
                         {showForm ? <Form
-                        handleForm={handleForm}
-                        showForm={showForm}
-                        setShowForm={setShowForm} 
                         type={type}
-                        setType={setType}
                         toppings={toppings}
-                        setToppings={setToppings}
-                        orders={orders}
                         setOrders={setOrders}
                         /> : null}
             </div>)
