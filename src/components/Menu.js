@@ -13,7 +13,7 @@ function Menu({pizzas, setToppings, setType, setImage}) {
             />
         })}
     </div>
-  )
+  );
 }
 
 export default Menu;
