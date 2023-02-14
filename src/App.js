@@ -1,15 +1,16 @@
-//import './App.css';
 import PizzaBuilder from './components/PizzaBuilder';
 import { useEffect, useState } from 'react';
-import background from "./backgroundPic.png";
+import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
+
 import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
 import Menu from './components/Menu';
 import TopMenu from './components/TopMenu';
-import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
-import {BrowserRouter, Route, NavLink, Switch} from "react-router-dom";
+import Footer from './components/Footer';
 import Orders from './components/Orders';
+
+import background from "./backgroundPic.png";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -247,6 +248,9 @@ body {
 
 `
 
+import './App.css';
+
+
 function App() {
 
   const API = "http://localhost:3000/pizzas";
@@ -278,7 +282,6 @@ function App() {
   return (
       <Switch>
         <div className="App" style={{ backgroundImage: `url(${background})`}}>
-        <GlobalStyle />
         <Heading/>
         <NavBar />
         <div className="spacer"></div>

@@ -7,8 +7,8 @@ import Form from './Form';
 function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders}) {
 
     const [toppings, setToppings] = useState([]);
-    const [type, setType] = useState("Select Your Pizza");
-    const [image, setImage] = useState("./assets/default.png");
+    const [type, setType] = useState("");
+    const [image, setImage] = useState("");
     const [showForm, setShowForm] = useState(false)
 
     function handleForm(){
@@ -34,7 +34,7 @@ function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders}) {
                         /> : null}
             </div>)
             : (<div className="content">
-                <h1>Select Your Pizza</h1>
+                <h1>Select Your Pizza Below</h1>
             </div>)}
             <div className="lower-content">
                 <Menu setToppings={setToppings}
