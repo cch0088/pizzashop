@@ -15,20 +15,20 @@
     {
         "id": 3,
         "type": "olives",
-        "toppings": ["cheese, olives"],
-        "image": ""
+        "toppings": ["cheese", "olives"],
+        "image": "./assets/pies/plain.png"
     },
     {
         "id": 4,
         "type": "meatball",
-        "toppings": ["cheese, meatball"],
-        "image": ""
+        "toppings": ["cheese", "meatball"],
+        "image": "./assets/pies/plain.png"
     },
     {
         "id": 5,
         "type": "mushroom",
-        "toppings": ["cheese, mushroom"],
-        "image": ""
+        "toppings": ["cheese", "mushroom"],
+        "image": "./assets/pies/plain.png"
     }],
 
     "orders":
@@ -69,6 +69,11 @@
     {
         "id": 5,
         "topping": "mushroom",
+        "image": ""
+    },
+    {
+        "id": 6,
+        "topping": "ham",
         "image": ""
     }
 ]}

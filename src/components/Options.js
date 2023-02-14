@@ -1,32 +1,46 @@
 import React from 'react';
 
-function Options({toppings, setToppings, allToppings}) {
+function Options({toppings, type, setToppings, allToppings})
+{
+  const toppingsExist = [];
 
-  const updateToppings = (e) => {
-    console.log(e.target.checked, e.target.id);
-  };
+  const toggleTopping = (e) => {
+    const index = toppingsExist.indexOf(e.target.name);
+    if (index > -1)
+    {
+      toppingsExist.splice(index, 1);
+    }
+    else
+    {
+      toppingsExist.push(e.target.name);
+    }
 
-  return (
-    <div>
-      <form>
-        <div>Select Toppings</div>
-          <div className="options">
-            {allToppings.map((t) => 
-              {
-                return (<div key={t.id}>
-                          <input type="checkbox"
-                                  id={t.topping}
-                                  defaultChecked={toppings.includes(t.topping)}
-                                  onChange={updateToppings}>
-                           </input>
-                           {t.topping.charAt(0).toUpperCase() + t.topping.slice(1)}
-                        </div>);
-              })}
-          </div>
-        <div><input type="submit" value="Check Out"></input></div>
-      </form>
-    </div>
-  )
+    setToppings(toppings => toppingsExist);
+  }
+
+  if (type !== "Select Your Pizza")
+  {
+    return (
+      <div>
+          <div>Select Toppings</div>
+            <div className="options">
+              {allToppings.map((x, index) => 
+                {
+                  if (toppings.includes(x.topping)) {toppingsExist.push(x.topping)};
+                  return (<div key={index}>
+                            <button id={x.topping} name={x.topping} onClick={toggleTopping}>{toppings.includes(x.topping) ? "Del" : "Add"}</button>
+                            {x.topping.charAt(0).toUpperCase() + x.topping.slice(1)}
+                          </div>);
+                })}
+            </div>
+          <div><button>Check Out</button></div>
+      </div>
+    )
+  }
+  else
+  {
+    return null;
+  }
 }
 
 export default Options;

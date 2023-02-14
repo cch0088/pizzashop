@@ -6,8 +6,8 @@ import Menu from './Menu';
 function PizzaBuilder({pizzas, allToppings}) {
 
     const [toppings, setToppings] = useState([]);
-    const [type, setType] = useState("");
-    const [image, setImage] = useState("");
+    const [type, setType] = useState("Select Your Pizza");
+    const [image, setImage] = useState("./assets/default.png");
 
     return (
         <div>
@@ -16,7 +16,8 @@ function PizzaBuilder({pizzas, allToppings}) {
                             image={image} />
                 <Options toppings={toppings}
                         setToppings={setToppings}
-                        allToppings={allToppings} />
+                        allToppings={allToppings}
+                        type={type} />
             </div>
             <div className="lower-content">
                 <Menu setToppings={setToppings}
