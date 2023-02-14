@@ -9,7 +9,6 @@ import TopMenu from './components/TopMenu';
 import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
 import {BrowserRouter, Route, NavLink, Switch} from "react-router-dom";
-import Footer from './components/Footer';
 import Orders from './components/Orders';
 
 
@@ -210,6 +209,42 @@ body {
   font-weight: 600;
 }
 
+.order-content {
+  min-height: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.order-title {
+  display: inline;
+  padding: 30px;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+
+  .box-style {
+    display: inline-block;
+    width: 50px;
+    padding: 12px;
+    margin: 0 6px 6px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 30px;
+    background: white;
+  }
+  
+};
+
+
+
+}
+
 `
 
 function App() {
@@ -262,8 +297,6 @@ function App() {
         <Route path="/menu">
           <TopMenu pizzas={pizzas} />
         </Route>
-
-      <Footer />
       </div>
       </Switch>
   );
