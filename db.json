@@ -49,12 +49,12 @@
     [{
         "id": 1,
         "topping": "cheese",
-        "image": ""
+        "image": "./assets/toppings/cheese.png"
     },
     {
         "id": 2,
         "topping": "pepperoni",
-        "image": ""
+        "image": "./assets/toppings/pepperoni.png"
     },
     {
         "id": 3,

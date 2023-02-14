@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Options({toppings, type, setToppings, allToppings})
+function Options({toppings, setToppings, allToppings})
 {
   const toppingsExist = [];
 
@@ -18,8 +18,6 @@ function Options({toppings, type, setToppings, allToppings})
     setToppings(toppings => toppingsExist);
   }
 
-  if (type !== "Select Your Pizza")
-  {
     return (
       <div>
           <div>Select Toppings</div>
@@ -36,11 +34,7 @@ function Options({toppings, type, setToppings, allToppings})
           <div><button>Check Out</button></div>
       </div>
     )
-  }
-  else
-  {
-    return null;
-  }
+
 }
 
 export default Options;
