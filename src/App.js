@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import background from "./backgroundPic.png";
 import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
+import Menu from './components/Menu';
+import TopMenu from './components/TopMenu';
 import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
 import {BrowserRouter, Route, NavLink, Switch} from "react-router-dom";
@@ -89,8 +91,8 @@ body {
 }
 
 .content {
-  min-height: 350px;
-  background-color: lightblue;
+  min-height: 450px;
+  background-color: rgba(255, 255, 255, 0.6);;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -162,7 +164,9 @@ body {
 }
 
 .pizza-display {
-  width: 100%;
+  width: 40%;
+  margin-right: 10%;
+  position: absolute;
 }
 
 .options {
@@ -255,6 +259,10 @@ function App() {
           setOrders={setOrders}
           />
         </Route>
+        <Route path="/menu">
+          <TopMenu pizzas= {pizzas} type={type} toppings={toppings} image={image}/>
+        </Route>
+
       <Footer />
       </div>
       </Switch>

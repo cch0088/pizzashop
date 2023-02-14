@@ -16,19 +16,19 @@
         "id": 3,
         "type": "olives",
         "toppings": ["cheese", "olives"],
-        "image": "./assets/pies/plain.png"
+        "image": "./assets/pies/olives.png"
     },
     {
         "id": 4,
         "type": "meatball",
         "toppings": ["cheese", "meatball"],
-        "image": "./assets/pies/plain.png"
+        "image": "./assets/pies/meatball.png"
     },
     {
         "id": 5,
         "type": "mushroom",
         "toppings": ["cheese", "mushroom"],
-        "image": "./assets/pies/plain.png"
+        "image": "./assets/pies/mushroom.png"
     }],
 
     "orders":
@@ -49,31 +49,36 @@
     [{
         "id": 1,
         "topping": "cheese",
-        "image": ""
+        "image": "./assets/toppings/cheese.png"
     },
     {
         "id": 2,
         "topping": "pepperoni",
-        "image": ""
+        "image": "./assets/toppings/pepperoni.png"
     },
     {
         "id": 3,
         "topping": "olives",
-        "image": ""
+        "image": "./assets/toppings/olives.png"
     },
     {
         "id": 4,
         "topping": "meatball",
-        "image": ""
+        "image": "./assets/toppings/meatball.png"
     },
     {
         "id": 5,
         "topping": "mushroom",
-        "image": ""
+        "image": "./assets/toppings/mushroom.png"
     },
     {
         "id": 6,
         "topping": "ham",
-        "image": ""
+        "image": "./assets/toppings/ham.png"
+    },
+    {
+        "id": 7,
+        "topping": "pineapple",
+        "image": "./assets/toppings/frown.png"
     }
 ]}

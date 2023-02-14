@@ -18,8 +18,6 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
     setToppings(toppings => toppingsExist);
   }
 
-  if (type !== "Select Your Pizza")
-  {
     return (
       <div>
           <div className="boldText">Select Toppings</div>
@@ -36,11 +34,7 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
           <div><button onClick={handleForm}>Check Out</button></div>
       </div>
     )
-  }
-  else
-  {
-    return null;
-  }
+
 }
 
 export default Options;

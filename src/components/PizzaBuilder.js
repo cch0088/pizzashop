@@ -15,13 +15,15 @@ function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders}) {
         setShowForm((showForm) => !showForm);
     }
 
+
     return (
-        <div>
-            <div className="content">
-                <PizzaDisplay type={type}
-                            image={image} />
+        <div>{(type !== "")
+            ? (<div className="content">
+                <PizzaDisplay toppings={toppings}
+                            allToppings={allToppings} />
                 <Options toppings={toppings}
                         setToppings={setToppings}
+
                         allToppings={allToppings}
                         type={type}
                         handleForm={handleForm}
@@ -38,6 +40,10 @@ function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders}) {
                 setOrders={setOrders}
                 /> : null}       
             </div>
+            </div>)
+            : (<div className="content">
+                <h1>Select Your Pizza</h1>
+            </div>)}
             <div className="lower-content">
                 <Menu setToppings={setToppings}
                     setType={setType}
