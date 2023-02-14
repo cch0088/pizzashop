@@ -5,6 +5,7 @@ import background from "./backgroundPic.png";
 import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
 import Menu from './components/Menu';
+import TopMenu from './components/TopMenu';
 import Options from './components/Options';
 import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
@@ -89,7 +90,7 @@ body {
 
 .content {
   min-height: 450px;
-  background-color: lightblue;
+  background-color: rgba(255, 255, 255, 0.6);;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -223,6 +224,11 @@ function App() {
               pizzas = {pizzas}
               setPizzas={setPizzas} />
         </Route>
+        <Route path="/menu">
+          <TopMenu pizzas= {pizzas} type={type} toppings={toppings} image={image}/>
+        </Route>
+
+      
       </div>
       <div className="footer">Footer</div>  
       <div className="bottom"></div>
