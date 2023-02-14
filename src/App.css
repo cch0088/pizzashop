@@ -1,3 +1,17 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 .App {
   text-align: center;
 } 
@@ -12,6 +26,8 @@
 #horz-list ul li {
   display: inline;
   padding: 30px;
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -60,7 +76,7 @@ body {
 
 .content {
   min-height: 450px;
-  background-color: lightblue;
+  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -68,8 +84,8 @@ body {
 }
 
 .lower-content {
-  height: 100px;
-  background-color: white;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,7 +93,7 @@ body {
 }
 
 .spacer {
-  height: 50px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,7 +148,9 @@ body {
 }
 
 .pizza-display {
-  width: 100%;
+  width: 40%;
+  margin-right: 10%;
+  position: absolute;
 }
 
 .options {
@@ -148,9 +166,9 @@ body {
   justify-content: center;
   overflow: auto;
   width: 100%;
-}
+} 
 
-/* .add-pizza-form {
+.add-pizza-form {
   margin: 1rem 0;
   width: 300px;
   display: flex;
@@ -163,25 +181,15 @@ body {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-} */
+}
 
-/* #pizza-type-input {
+#pizza-type-input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-} */
-
-.submit {
-  position: relative;
-  background-color: #e04b52;
-  border-radius: 5px;
-  height: 2rem;
-  width: max-content;
-  color: whitesmoke;
-  font-size: 18px;
-  justify-self: center;
-  font-family: monospace;
-  margin: 3px;
 }
 
+.boldText {
+  font-weight: 600;
+}
