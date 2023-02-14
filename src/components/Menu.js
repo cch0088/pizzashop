@@ -5,9 +5,7 @@ import Pizza from "./Pizza"
 function Menu({pizzas, setToppings, setType, setImage}) {
 
   return (
-    <div className="lower-content">
      <div className="menuNav">
-
         {pizzas.map(pizza => {
             return <Pizza
             key={pizza.id}
@@ -15,8 +13,7 @@ function Menu({pizzas, setToppings, setType, setImage}) {
             />
         })}
     </div>
-    </div>
-  )
+  );
 }
 
 export default Menu;
