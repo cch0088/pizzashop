@@ -202,6 +202,10 @@ body {
   box-sizing: border-box;
 }
 
+.boldText {
+  font-weight: 600;
+}
+
 `
 
 function App() {

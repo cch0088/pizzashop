@@ -18,14 +18,15 @@ function Form({handleForm, showForm, setShowForm, type, setType, toppings, setTo
             },
                 body: JSON.stringify(newPizzaOrder)
         })
+        .then(r => r.json())
 
         setOrders(prev => [...prev, newPizzaOrder])
     }
     
     return (
-    <div>
+    <div className="content">
         <form onSubit={handleSubmit}>
-            <h3>Order A Pizza</h3>
+            <h3>Checkout</h3>
             <label for="name">Name:</label>
             <input
                 type="text"
@@ -34,7 +35,7 @@ function Form({handleForm, showForm, setShowForm, type, setType, toppings, setTo
                 className="input-text"
             >     
             </input>
-            <label for="type">Selected Pizza Type</label>
+            <label for="type">Selected Pizza Type:</label>
             <input id="pizza-type-input"
             type="text"
             value={type}
@@ -42,7 +43,7 @@ function Form({handleForm, showForm, setShowForm, type, setType, toppings, setTo
             className="pizza-type-input" 
             >
             </input>
-            <label for="toppings">Selected Pizza Toppings</label>
+            <label for="toppings">Selected Pizza Toppings:</label>
             <input
             type="text"
             value={toppings}

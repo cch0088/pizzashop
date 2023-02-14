@@ -22,7 +22,7 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
   {
     return (
       <div>
-          <div>Select Toppings</div>
+          <div className="boldText">Select Toppings</div>
             <div className="options">
               {allToppings.map((x, index) => 
                 {
