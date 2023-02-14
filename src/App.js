@@ -1,14 +1,13 @@
-import './App.css';
+//import './App.css';
 import PizzaBuilder from './components/PizzaBuilder';
 import { useEffect, useState } from 'react';
 import background from "./backgroundPic.png";
 import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
-import Menu from './components/Menu';
-import Options from './components/Options';
 import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
 import {BrowserRouter, Route, NavLink, Switch} from "react-router-dom";
+import Footer from './components/Footer';
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -88,7 +87,7 @@ body {
 }
 
 .content {
-  min-height: 450px;
+  min-height: 350px;
   background-color: lightblue;
   display: flex;
   flex-direction: row;
@@ -189,10 +188,6 @@ function App() {
   const [pizzas, setPizzas] = useState([]);
   const [allToppings, setAllToppings] = useState([]);
 
-  const [toppings, setToppings] = useState([]);
-  const [type, setType] = useState("");
-  const [image, setImage] = useState("");
-
   useEffect(() => {
     fetch(API)
     .then(r => r.json())
@@ -206,28 +201,21 @@ function App() {
   },[])
 
   return (
-    <Switch>
-    <div className="App" style={{ backgroundImage: `url(${background})`}}>
+      <Switch>
+        <div className="App" style={{ backgroundImage: `url(${background})`}}>
         <GlobalStyle />
-          <Heading/>
-          <NavBar />
-      <div className="spacer"></div>
-      <div className="content">
-      <Route path="/about">
+        <Heading/>
+        <NavBar />
+        <div className="spacer"></div>
+        <Route path="/about">
           <NavigationMenu />
-      </Route>
-        <Route path="/options">
-            <PizzaBuilder toppings={toppings} type={type} image={image} />
-            <Options toppings={toppings} setToppings={setToppings} allToppings={allToppings} setAllToppings={setAllToppings}/>
-            <Menu setToppings={setToppings} setType={setType} setImage={setImage}
-              pizzas = {pizzas}
-              setPizzas={setPizzas} />
         </Route>
+        <Route path="/options">
+          <PizzaBuilder pizzas={pizzas} allToppings={allToppings} />
+        </Route>
+      <Footer />
       </div>
-      <div className="footer">Footer</div>  
-      <div className="bottom"></div>
-      </div>
-  </Switch>
+      </Switch>
   );
 }
 
