@@ -211,7 +211,7 @@ function App() {
           <NavigationMenu />
         </Route>
         <Route path="/options">
-          <PizzaBuilder pizzas={pizzas} allToppings={allToppings} setAllToppings={setAllToppings}/>
+          <PizzaBuilder pizzas={pizzas} allToppings={allToppings} />
         </Route>
       <Footer />
       </div>

@@ -3,7 +3,7 @@ import PizzaDisplay from './PizzaDisplay';
 import Options from './Options';
 import Menu from './Menu';
 
-function PizzaBuilder({pizzas, allToppings, setAllToppings}) {
+function PizzaBuilder({pizzas, allToppings}) {
 
     const [toppings, setToppings] = useState([]);
     const [type, setType] = useState("");
@@ -16,8 +16,7 @@ function PizzaBuilder({pizzas, allToppings, setAllToppings}) {
                             image={image} />
                 <Options toppings={toppings}
                         setToppings={setToppings}
-                        allToppings={allToppings}
-                        setAllToppings={setAllToppings} />
+                        allToppings={allToppings} />
             </div>
             <div className="lower-content">
                 <Menu setToppings={setToppings}

@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Options({toppings, setToppings, allToppings, setAllToppings}) {
+function Options({toppings, setToppings, allToppings}) {
 
-  const handleChange = (e) => {
-    //(e.target.checked) ? e.target.checked=true : e.target.checked=false;
+  const updateToppings = (e) => {
+    console.log(e.target.checked, e.target.id);
   };
 
   return (
@@ -11,16 +11,15 @@ function Options({toppings, setToppings, allToppings, setAllToppings}) {
       <form>
         <div>Select Toppings</div>
           <div className="options">
-            {allToppings.map(t => 
+            {allToppings.map((t) => 
               {
                 return (<div key={t.id}>
-                          {<input type="checkbox"
+                          <input type="checkbox"
                                   id={t.topping}
-                                  defaultChecked={false}
-                                  onChange={handleChange}>
-                           </input>}
-                          {toppings.includes(t.topping)}
-                          {t.topping.charAt(0).toUpperCase() + t.topping.slice(1)}
+                                  defaultChecked={toppings.includes(t.topping)}
+                                  onChange={updateToppings}>
+                           </input>
+                           {t.topping.charAt(0).toUpperCase() + t.topping.slice(1)}
                         </div>);
               })}
           </div>
