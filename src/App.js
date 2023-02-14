@@ -8,6 +8,8 @@ import {createGlobalStyle} from 'styled-components';
 import NavBar from './components/NavBar';
 import {BrowserRouter, Route, NavLink, Switch} from "react-router-dom";
 import Footer from './components/Footer';
+import Orders from './components/Orders';
+
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -178,6 +180,28 @@ body {
   width: 100%;
 } 
 
+.add-pizza-form {
+  margin: 1rem 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-text {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#pizza-type-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 `
 
 function App() {
@@ -187,6 +211,7 @@ function App() {
 
   const [pizzas, setPizzas] = useState([]);
   const [allToppings, setAllToppings] = useState([]);
+  const [orders, setOrders] = useState([])
 
   useEffect(() => {
     fetch(API)
@@ -200,6 +225,13 @@ function App() {
     .then(t => setAllToppings(t));
   },[])
 
+  useEffect(() => {
+    fetch('http://localhost:3000/orders')
+    .then(r => r.json())
+    .then(data => setOrders(data))
+
+  }, [])
+
   return (
       <Switch>
         <div className="App" style={{ backgroundImage: `url(${background})`}}>
@@ -211,7 +243,13 @@ function App() {
           <NavigationMenu />
         </Route>
         <Route path="/options">
-          <PizzaBuilder pizzas={pizzas} allToppings={allToppings} />
+          <PizzaBuilder pizzas={pizzas} allToppings={allToppings} orders={orders} setOrders={setOrders}/>
+        </Route>
+        <Route path ="/orders">
+          <Orders
+          orders={orders}
+          setOrders={setOrders}
+          />
         </Route>
       <Footer />
       </div>

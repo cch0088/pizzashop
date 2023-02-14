@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Options({toppings, type, setToppings, allToppings})
+function Options({toppings, type, setToppings, allToppings, handleForm})
 {
   const toppingsExist = [];
 
@@ -33,7 +33,7 @@ function Options({toppings, type, setToppings, allToppings})
                           </div>);
                 })}
             </div>
-          <div><button>Check Out</button></div>
+          <div><button onClick={handleForm}>Check Out</button></div>
       </div>
     )
   }
