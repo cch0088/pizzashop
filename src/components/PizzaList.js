@@ -19,8 +19,8 @@ function PizzaList({toppings, image, type, setToppings, setType, setImage}) {
                 </div>
                 <div className="pizza-menu-topping-list">
                     <ul>
-                        {toppings.map((topping) => {
-                            return <li>{topping.charAt(0).toUpperCase() + topping.slice(1)}</li>
+                        {toppings.map((topping, index) => {
+                            return <li key={index}>{topping.charAt(0).toUpperCase() + topping.slice(1)}</li>
                         })}
                     </ul>
                 </div>
