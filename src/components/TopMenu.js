@@ -1,15 +1,17 @@
 import React from "react";
-import Pizza from "./Pizza";
+import PizzaList from "./PizzaList";
 
 
 function TopMenu({pizzas}) {
     return(
         <div className="content">
-        {pizzas.map(pizza => {
-            return <Pizza
-            key={pizza.id}
-            {...pizza} />
-        })}
+            <div className="pizza-list">
+                {pizzas.map(pizza => {
+                    return <PizzaList
+                    key={pizza.id}
+                    {...pizza} />
+                })}
+            </div>
         </div>
     )
 }
