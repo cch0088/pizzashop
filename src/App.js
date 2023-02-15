@@ -8,6 +8,7 @@ import Menu from './components/Menu';
 import TopMenu from './components/TopMenu';
 import NavBar from './components/NavBar';
 import Orders from './components/Orders';
+import Filters from './components/Filters';
 
 import background from "./backgroundPic.png";
 
@@ -22,6 +23,7 @@ function App() {
   const [pizzas, setPizzas] = useState([]);
   const [allToppings, setAllToppings] = useState([]);
   const [orders, setOrders] = useState([])
+  const [filters, setFilters] = useState({vegetarian: "all"})
 
   useEffect(() => {
     fetch(API)
@@ -42,6 +44,10 @@ function App() {
 
   }, [])
 
+  const filteredList = pizzas.filter(pizza => {
+    return pizza.vegetarian === filters.vegetarian || filters.vegetarian === "all"
+  })
+
   return (
       <Switch>
         <div className="App" style={{ backgroundImage: `url(${background})`}}>
@@ -61,8 +67,12 @@ function App() {
           />
         </Route>
         <Route path="/menu">
-          <TopMenu pizzas={pizzas} />
+          <TopMenu pizzas={filteredList} />
         </Route>
+          <Filters
+          filters={filters}
+          setFilters={setFilters}
+          />
       </div>
       </Switch>
   );
