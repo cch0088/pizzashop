@@ -3,6 +3,7 @@
     {
       "id": 1,
       "type": "plain",
+      "vegetarian": "yes",
       "toppings": [
         "cheese"
       ],
@@ -11,6 +12,7 @@
     {
       "id": 2,
       "type": "pepperoni",
+      "vegetarian": "no",
       "toppings": [
         "cheese",
         "pepperoni"
@@ -20,6 +22,7 @@
     {
       "id": 3,
       "type": "olives",
+      "vegetarian": "yes",
       "toppings": [
         "cheese",
         "olives"
@@ -29,6 +32,7 @@
     {
       "id": 4,
       "type": "meatball",
+      "vegetarian": "no",
       "toppings": [
         "cheese",
         "meatball"
@@ -38,6 +42,7 @@
     {
       "id": 5,
       "type": "mushroom",
+      "vegetarian": "yes",
       "toppings": [
         "cheese",
         "mushroom"
@@ -74,6 +79,12 @@
       "type": "Select Your Pizza",
       "toppings": "cheese",
       "id": 4
+    },
+    {
+      "name": "",
+      "type": "olives",
+      "toppings": "cheese,olives,ham",
+      "id": 5
     }
   ],
   "toppings": [
