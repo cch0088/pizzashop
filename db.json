@@ -74,6 +74,12 @@
       "type": "Select Your Pizza",
       "toppings": "cheese",
       "id": 4
+    },
+    {
+      "name": "",
+      "type": "olives",
+      "toppings": "cheese,olives,ham",
+      "id": 5
     }
   ],
   "toppings": [
