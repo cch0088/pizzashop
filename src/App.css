@@ -196,6 +196,12 @@ body {
   position: absolute;
 }
 
+.pizza-select {
+  cursor: pointer;
+  width: 400px;
+  height: 300px;
+}
+
 .options {
   width: 150px;
   display: flex;
