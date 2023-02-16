@@ -113,6 +113,16 @@
         "pepperoni"
       ],
       "id": 3
+    },
+    {
+      "name": "",
+      "type": "pepperoni",
+      "toppings": [
+        "cheese",
+        "pepperoni",
+        "ham"
+      ],
+      "id": 4
     }
   ]
 }
