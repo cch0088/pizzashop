@@ -5,12 +5,11 @@ import Menu from './Menu';
 import Form from './Form';
 import Filters from './Filters';
 
-function PizzaBuilder({pizzas, allToppings, handleForm, setOrders, filters, setFilters}) {
+function PizzaBuilder({pizzas, type, toppings, setToppings, 
+                      setType, setImage, allToppings, handleForm, 
+                      setOrders, filters, setFilters}) {
 
-    const [toppings, setToppings] = useState([]);
-    const [type, setType] = useState("");
-    const [image, setImage] = useState("");
-    const [showForm, setShowForm] = useState(false)
+    const [showForm, setShowForm] = useState(false);
 
     function handleForm(){
         setShowForm((showForm) => !showForm);
@@ -39,7 +38,7 @@ function PizzaBuilder({pizzas, allToppings, handleForm, setOrders, filters, setF
                 <h1>Select Your Pizza Below</h1>
             </div>)}
             <div className="filler">
-                <Filters filters={filters} setFilters={setFilters} />
+                <Filters setFilters={setFilters} />
             </div>
             <div className="lower-content">
                 <Menu setToppings={setToppings}

@@ -77,6 +77,33 @@ body {
   background-color: black;
 }
 
+.order-form {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+
+  padding: 16px;
+
+  background-color: white;
+  position: absolute;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.form-field-container {
+  text-align: left;
+  padding: 4px;
+}
+
+.form-field {
+  width: 100%;
+  padding: 4px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 .pizza-list {
   width: 90%;
 }
@@ -210,8 +237,8 @@ body {
 }
 
 .pizza-display {
-  width: 40%;
-  margin-right: 20%;
+  height: 25%;
+  margin-right: 10%;
   position: absolute;
 }
 
@@ -226,8 +253,15 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.options-menu {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .menuNav {
@@ -244,13 +278,6 @@ body {
   align-items: flex-start;
 }
 
-.input-text {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-
 #pizza-type-input {
   width: 100%;
   padding: 12px 20px;
@@ -261,6 +288,13 @@ body {
 .boldText {
   font-weight: 600;
   font-size: 30px;
+}
+
+.select-toppings-heading {
+  font-weight: bold;
+  font-size: calc(8px + 1vmin);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .order-content {
@@ -300,6 +334,7 @@ body {
   background-color: rgb(214, 249, 249);
   padding: 10px;
   width: 300px;
+  margin: 4px;
 }
 
 .center {

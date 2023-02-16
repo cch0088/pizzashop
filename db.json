@@ -50,49 +50,6 @@
       "image": "./assets/pies/mushroom.png"
     }
   ],
-  "orders": [
-    {
-      "id": 1,
-      "type": "plain",
-      "toppings": [
-        "cheese"
-      ],
-      "image": "./assets/pies/plain.png"
-    },
-    {
-      "id": 2,
-      "type": "pepperoni",
-      "toppings": [
-        "cheese",
-        "pepperoni"
-      ],
-      "image": "./assets/pies/pepperoni.png"
-    },
-    {
-      "name": "Test",
-      "type": "pepperoni",
-      "toppings": "cheese,pepperoni",
-      "id": 3
-    },
-    {
-      "name": "test",
-      "type": "Select Your Pizza",
-      "toppings": "cheese",
-      "id": 4
-    },
-    {
-      "name": "",
-      "type": "olives",
-      "toppings": "cheese,olives,ham",
-      "id": 5
-    },
-    {
-      "name": "Test",
-      "type": "pepperoni",
-      "toppings": "cheese,pepperoni",
-      "id": 6
-    }
-  ],
   "toppings": [
     {
       "id": 1,
@@ -128,6 +85,34 @@
       "id": 7,
       "topping": "pineapple",
       "image": "./assets/toppings/frown.png"
+    }
+  ],
+  "orders": [
+    {
+      "name": "Test Order",
+      "type": "pepperoni",
+      "toppings": [
+        "cheese",
+        "pepperoni"
+      ],
+      "id": 1
+    },
+    {
+      "name": "",
+      "type": "plain",
+      "toppings": [
+        "cheese"
+      ],
+      "id": 2
+    },
+    {
+      "name": "",
+      "type": "pepperoni",
+      "toppings": [
+        "cheese",
+        "pepperoni"
+      ],
+      "id": 3
     }
   ]
 }

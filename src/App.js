@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 
 import Heading from './components/Heading';
-import NavigationMenu from './components/NavigationMenu';
+import Contact from './components/Contact';
 import TopMenu from './components/TopMenu';
 import NavBar from './components/NavBar';
 import Orders from './components/Orders';
@@ -23,6 +23,10 @@ function App() {
   const [allToppings, setAllToppings] = useState([]);
   const [orders, setOrders] = useState([])
   const [filters, setFilters] = useState({vegetarian: "all"})
+
+  const [toppings, setToppings] = useState([]);
+  const [type, setType] = useState("");
+  const [image, setImage] = useState("");
 
   useEffect(() => {
     fetch(API)
@@ -54,7 +58,7 @@ function App() {
           <NavBar />
           <div className="spacer"></div>
           <Route path="/about">
-            <NavigationMenu />
+            <Contact />
           </Route>
           <Route path="/options">
             <PizzaBuilder 
@@ -62,7 +66,12 @@ function App() {
               allToppings={allToppings}
               setOrders={setOrders}
               filters={filters}
-              setFilters={setFilters} />
+              setFilters={setFilters}
+              setToppings={setToppings}
+              setType={setType}
+              setImage={setImage}
+              type={type}
+              toppings={toppings} />
           </Route>
           <Route path ="/orders">
             <Orders
@@ -70,7 +79,14 @@ function App() {
               setOrders={setOrders} />
           </Route>
           <Route path="/menu">
-            <TopMenu pizzas={filteredList} filters={filters} setFilters={setFilters} />
+            <TopMenu
+              pizzas={filteredList}
+              filters={filters}
+              setFilters={setFilters}
+              setToppings={setToppings}
+              setType={setType}
+              setImage={setImage} 
+              />
           </Route>
           <Route path="/home">
           <Home />
