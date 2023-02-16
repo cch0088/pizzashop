@@ -36,7 +36,7 @@ function PizzaBuilder({pizzas, type, toppings, setToppings, setType, setImage, a
                 <h1>Select Your Pizza Below</h1>
             </div>)}
             <div className="filler">
-                <Filters filters={filters} setFilters={setFilters} />
+                <Filters setFilters={setFilters} />
             </div>
             <div className="lower-content">
                 <Menu setToppings={setToppings}

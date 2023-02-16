@@ -14,8 +14,8 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
   }
 
     return (
-      <div>
-          <div className="boldText">Select Toppings</div>
+      <div className="options-menu">
+          <div className="select-toppings-heading">Select Toppings</div>
             <div className="options">
               {allToppings.map((x, index) => 
                 {
@@ -28,7 +28,7 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
                           </div>);
                 })}
             </div>
-          <div><button onClick={handleForm}>Check Out</button></div>
+          <div><button style={{"font-weight": "bold"}} onClick={handleForm}>Check Out</button></div>
       </div>
     )
 

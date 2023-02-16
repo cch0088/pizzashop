@@ -2,11 +2,11 @@ import React from "react";
 import PizzaList from "./PizzaList";
 import Filters from "./Filters";
 
-function TopMenu({filters, setFilters, pizzas, setToppings, setType, setImage}) {
+function TopMenu({setFilters, pizzas, setToppings, setType, setImage}) {
     return(
         <div className="content">
             <div className="pizza-list">
-                <Filters filters={filters} setFilters={setFilters} />
+                <Filters setFilters={setFilters} />
                 {pizzas.map(pizza => {
                     return <PizzaList
                     key={pizza.id}

@@ -206,7 +206,7 @@ body {
 }
 
 .pizza-display {
-  width: 40%;
+  height: 25%;
   margin-right: 10%;
   position: absolute;
 }
@@ -222,7 +222,15 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.options-menu {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .menuNav {
@@ -256,6 +264,13 @@ body {
 
 .boldText {
   font-weight: 600;
+}
+
+.select-toppings-heading {
+  font-weight: bold;
+  font-size: calc(8px + 1vmin);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .order-content {

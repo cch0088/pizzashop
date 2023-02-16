@@ -1,6 +1,6 @@
 import React from "react";
 
-function Filters({filters, setFilters}) {
+function Filters({setFilters}) {
 
     function handleFilter(event){
         const selectedType = event.target.value
