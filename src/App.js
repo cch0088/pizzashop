@@ -7,6 +7,7 @@ import NavigationMenu from './components/NavigationMenu';
 import TopMenu from './components/TopMenu';
 import NavBar from './components/NavBar';
 import Orders from './components/Orders';
+import Home from './components/Home';
 
 import background from "./backgroundPic.png";
 
@@ -48,7 +49,7 @@ function App() {
 
   return (
       <Switch>
-        <div className="App" style={{ backgroundImage: `url(${background})`}}>
+        <div className="App">
           <Heading/>
           <NavBar />
           <div className="spacer"></div>
@@ -70,6 +71,9 @@ function App() {
           </Route>
           <Route path="/menu">
             <TopMenu pizzas={filteredList} filters={filters} setFilters={setFilters} />
+          </Route>
+          <Route path="/home">
+          <Home />
           </Route>
         </div>
       </Switch>
