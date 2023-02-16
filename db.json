@@ -85,6 +85,12 @@
       "type": "olives",
       "toppings": "cheese,olives,ham",
       "id": 5
+    },
+    {
+      "name": "Test",
+      "type": "pepperoni",
+      "toppings": "cheese,pepperoni",
+      "id": 6
     }
   ],
   "toppings": [
