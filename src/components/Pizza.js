@@ -10,7 +10,7 @@ function Pizza({toppings, image, type, setToppings, setType, setImage}) {
 
     return(
         <div className="menuNav">
-            <img src={image} alt={type} onClick={handleClick} style={{ "cursor":"pointer", "width":"400px", "height":"300px" }}/>
+            <img src={image} alt={type} onClick={handleClick} style={{ "cursor":"pointer", "width":"300px", "height":"300px" }}/>
         </div>
     )
 
