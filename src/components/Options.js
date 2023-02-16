@@ -22,7 +22,7 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
                   if (toppings.includes(x.topping)) {toppingsExist.push(x.topping)};
                   return (<div key={index}>
                             <button id={x.topping} name={x.topping} onClick={toggleTopping}>
-                              {toppings.includes(x.topping) ? "Del" : "Add"}
+                              {toppings.includes(x.topping) ? "✅" : "❎"}
                             </button>
                             {x.topping.charAt(0).toUpperCase() + x.topping.slice(1)}
                           </div>);

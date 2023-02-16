@@ -8,9 +8,8 @@ function Filters({filters, setFilters}) {
     }
 
     return(
-
         <div>
-            <h3>Vegetarian Pizzas</h3>
+            <h3>Pizza Styles</h3>
             <div>
                 <select onChange={handleFilter} name="vegetarian" id="veggie" aria-label="vegetarian">
                     <option value="all">All</option>
