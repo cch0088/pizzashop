@@ -1,11 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function PizzaList({toppings, image, type, setToppings, setType, setImage}) {
+
+    const history = useHistory();
 
     const handleClick = (e) => {
         setToppings(toppings);
         setType(type);
         setImage(image);
+        history.push("/options");
     }
 
     return(

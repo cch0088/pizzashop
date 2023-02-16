@@ -23,6 +23,10 @@ function App() {
   const [orders, setOrders] = useState([])
   const [filters, setFilters] = useState({vegetarian: "all"})
 
+  const [toppings, setToppings] = useState([]);
+  const [type, setType] = useState("");
+  const [image, setImage] = useState("");
+
   useEffect(() => {
     fetch(API)
     .then(r => r.json())
@@ -61,7 +65,12 @@ function App() {
               allToppings={allToppings}
               setOrders={setOrders}
               filters={filters}
-              setFilters={setFilters} />
+              setFilters={setFilters}
+              setToppings={setToppings}
+              setType={setType}
+              setImage={setImage}
+              type={type}
+              toppings={toppings} />
           </Route>
           <Route path ="/orders">
             <Orders
@@ -69,7 +78,14 @@ function App() {
               setOrders={setOrders} />
           </Route>
           <Route path="/menu">
-            <TopMenu pizzas={filteredList} filters={filters} setFilters={setFilters} />
+            <TopMenu
+              pizzas={filteredList}
+              filters={filters}
+              setFilters={setFilters}
+              setToppings={setToppings}
+              setType={setType}
+              setImage={setImage} 
+              />
           </Route>
         </div>
       </Switch>
