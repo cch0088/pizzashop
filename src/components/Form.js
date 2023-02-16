@@ -11,7 +11,9 @@ function Form({type, toppings, setOrders}) {
             toppings: event.target.toppings.value,
         }
 
-        fetch('http://localhost:3000/orders', {
+        const API_ORDER = "http://localhost:3000/orders";
+
+        fetch(API_ORDER, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newPizzaOrder)

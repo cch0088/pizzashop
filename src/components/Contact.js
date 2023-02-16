@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-function NavigationMenu() {
+function Contact() {
 
   return (
     <div id ="contentList">
@@ -16,4 +16,4 @@ function NavigationMenu() {
   );
 }
 
-export default NavigationMenu;
+export default Contact;

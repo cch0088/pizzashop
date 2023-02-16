@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 
 import Heading from './components/Heading';
-import NavigationMenu from './components/NavigationMenu';
+import Contact from './components/Contact';
 import TopMenu from './components/TopMenu';
 import NavBar from './components/NavBar';
 import Orders from './components/Orders';
@@ -57,7 +57,7 @@ function App() {
           <NavBar />
           <div className="spacer"></div>
           <Route path="/about">
-            <NavigationMenu />
+            <Contact />
           </Route>
           <Route path="/options">
             <PizzaBuilder 

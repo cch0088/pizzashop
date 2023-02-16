@@ -1,14 +1,13 @@
 import React from 'react';
 
-function ListOrder({type, toppings}) {
+function ListOrder({type, toppings, id}) {
     return(
         <div className="order-content">
-            <div className="center">
-            <ul className="div-box">
-                <ol className="order-info">Order Info</ol>
-                <ol className="center">Type: {type}</ol>
-                <ol className="center">Toppings: {toppings}</ol>
-            </ul>
+            <div className="div-box">
+                <div className="order-info">Order Info</div>
+                <div className="center">Type: {type}</div>
+                <div className="center">Toppings: {toppings}</div>
+                <div className="center">Order number: {id}</div>
             </div>
         </div>
     )

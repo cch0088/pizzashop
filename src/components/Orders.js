@@ -5,7 +5,7 @@ function Orders({orders}) {
 
     return(
         <div>
-            <h1 className="order-title">Recent Orders</h1>
+            <h1 className="order-title">Your Recent Orders</h1>
             <ul>
             {orders.map(order => {
                 return <ListOrder 
