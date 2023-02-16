@@ -34,7 +34,7 @@ function NavBar() {
 
 return(
     <div className="horz-list">
-        <NavLink to="/" exact style={linkStyles}>Home</NavLink>
+        <NavLink to="/home" exact style={linkStyles}>Home</NavLink>
         <NavLink to="/menu" exact style={linkStyles}>Menu</NavLink>
         <NavLink to="/options" exact style={linkStyles}>Builder</NavLink>
         <NavLink to="/about" exact style={linkStyles} activeStyle={{background: "white"}}>Contact</NavLink>
