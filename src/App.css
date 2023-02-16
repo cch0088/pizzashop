@@ -194,6 +194,13 @@ body {
   margin-right: 20px;
 }
 
+.pizza-topping-toggle {
+  background: none;
+  border: none;
+  padding: 4px;
+  margin-right: 4px;
+}
+
 .pizza-display {
   width: 40%;
   margin-right: 10%;

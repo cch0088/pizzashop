@@ -59,16 +59,14 @@ function App() {
             <PizzaBuilder 
               pizzas={filteredList}
               allToppings={allToppings}
-              orders={orders}
               setOrders={setOrders}
               filters={filters}
               setFilters={setFilters} />
           </Route>
           <Route path ="/orders">
             <Orders
-            orders={orders}
-            setOrders={setOrders}
-            />
+              orders={orders}
+              setOrders={setOrders} />
           </Route>
           <Route path="/menu">
             <TopMenu pizzas={filteredList} filters={filters} setFilters={setFilters} />

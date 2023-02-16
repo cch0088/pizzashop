@@ -5,7 +5,7 @@ import Menu from './Menu';
 import Form from './Form';
 import Filters from './Filters';
 
-function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders, filters, setFilters}) {
+function PizzaBuilder({pizzas, allToppings, handleForm, setOrders, filters, setFilters}) {
 
     const [toppings, setToppings] = useState([]);
     const [type, setType] = useState("");
@@ -38,7 +38,9 @@ function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders, filte
             : (<div className="content">
                 <h1>Select Your Pizza Below</h1>
             </div>)}
-            <div className="filler"><Filters filters={filters} setFilters={setFilters} /></div>
+            <div className="filler">
+                <Filters filters={filters} setFilters={setFilters} />
+            </div>
             <div className="lower-content">
                 <Menu setToppings={setToppings}
                     setType={setType}
@@ -50,4 +52,5 @@ function PizzaBuilder({pizzas, allToppings, handleForm, orders, setOrders, filte
         </div>
     );
 }
+
 export default PizzaBuilder;
