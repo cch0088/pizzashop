@@ -1,18 +1,18 @@
 import React from "react";
-import Pizza from "./Pizza";
+import PizzaList from "./PizzaList";
+import Filters from "./Filters";
 
-
-function TopMenu({pizzas}) {
+function TopMenu({filters, setFilters, pizzas}) {
     return(
         <div className="content">
-        {pizzas.map(pizza => {
-            return <Pizza
-            key={pizza.id}
-            {...pizza} />
-        })}
+            <div className="pizza-list">
+                <Filters filters={filters} setFilters={setFilters} />
+                {pizzas.map(pizza => {
+                    return <PizzaList key={pizza.id} {...pizza} />
+                })}
+            </div>
         </div>
     )
 }
-
 
 export default TopMenu;

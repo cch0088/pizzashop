@@ -4,11 +4,9 @@ import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 
 import Heading from './components/Heading';
 import NavigationMenu from './components/NavigationMenu';
-import Menu from './components/Menu';
 import TopMenu from './components/TopMenu';
 import NavBar from './components/NavBar';
 import Orders from './components/Orders';
-import Filters from './components/Filters';
 
 import background from "./backgroundPic.png";
 
@@ -51,29 +49,29 @@ function App() {
   return (
       <Switch>
         <div className="App" style={{ backgroundImage: `url(${background})`}}>
-        <Heading/>
-        <NavBar />
-        <div className="spacer"></div>
-        <Route path="/about">
-          <NavigationMenu />
-        </Route>
-        <Route path="/options">
-          <PizzaBuilder pizzas={pizzas} allToppings={allToppings} orders={orders} setOrders={setOrders}/>
-        </Route>
-        <Route path ="/orders">
-          <Orders
-          orders={orders}
-          setOrders={setOrders}
-          />
-        </Route>
-        <Route path="/menu">
-          <TopMenu pizzas={filteredList} />
-        </Route>
-          <Filters
-          filters={filters}
-          setFilters={setFilters}
-          />
-      </div>
+          <Heading/>
+          <NavBar />
+          <div className="spacer"></div>
+          <Route path="/about">
+            <NavigationMenu />
+          </Route>
+          <Route path="/options">
+            <PizzaBuilder 
+              pizzas={filteredList}
+              allToppings={allToppings}
+              setOrders={setOrders}
+              filters={filters}
+              setFilters={setFilters} />
+          </Route>
+          <Route path ="/orders">
+            <Orders
+              orders={orders}
+              setOrders={setOrders} />
+          </Route>
+          <Route path="/menu">
+            <TopMenu pizzas={filteredList} filters={filters} setFilters={setFilters} />
+          </Route>
+        </div>
       </Switch>
   );
 }

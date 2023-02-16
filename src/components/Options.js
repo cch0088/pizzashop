@@ -6,14 +6,9 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
 
   const toggleTopping = (e) => {
     const index = toppingsExist.indexOf(e.target.name);
-    if (index > -1)
-    {
-      toppingsExist.splice(index, 1);
-    }
-    else
-    {
-      toppingsExist.push(e.target.name);
-    }
+
+    if (index > -1) {toppingsExist.splice(index, 1);}
+    else {toppingsExist.push(e.target.name);}
 
     setToppings(toppings => toppingsExist);
   }
@@ -26,7 +21,9 @@ function Options({toppings, type, setToppings, allToppings, handleForm})
                 {
                   if (toppings.includes(x.topping)) {toppingsExist.push(x.topping)};
                   return (<div key={index}>
-                            <button id={x.topping} name={x.topping} onClick={toggleTopping}>{toppings.includes(x.topping) ? "Del" : "Add"}</button>
+                            <button className="pizza-topping-toggle" id={x.topping} name={x.topping} onClick={toggleTopping}>
+                              {toppings.includes(x.topping) ? "✅" : "❎"}
+                            </button>
                             {x.topping.charAt(0).toUpperCase() + x.topping.slice(1)}
                           </div>);
                 })}
