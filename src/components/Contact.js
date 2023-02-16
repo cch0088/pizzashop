@@ -8,8 +8,8 @@ function Contact() {
       <div id="horz-list">
         <ul>
           <li>Phone Number: 555-555-5555</li>
-          <li>Email: @pizzashop.com</li>
-          <li>Address: 11 Broadway</li>
+          <li>Email: info@pizzashop.com</li>
+          <li>Address: 11 Broadway New York, NY</li>
         </ul>
       </div>
     </div>
@@ -17,3 +17,8 @@ function Contact() {
 }
 
 export default Contact;
+
+/*
+11 Broadway,
+New York, NY 10012
+*/
