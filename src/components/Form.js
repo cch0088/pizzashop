@@ -1,10 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function Form({type, toppings, setOrders}) {
 
-    function handleSubmit(event) {
-        event.preventDefault();
+    const history = useHistory();
 
+    function handleSubmit(event) {
+        
         const newPizzaOrder = {
             name: event.target.name.value,
             type: type,
@@ -18,8 +20,8 @@ function Form({type, toppings, setOrders}) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newPizzaOrder)
         }).then(r => r.json())
-
-        setOrders(prev => [...prev, newPizzaOrder])
+        .then(setOrders(prev => [...prev, newPizzaOrder]))
+        .then(history.push("/orders"));    
     }
     
     return (
@@ -92,11 +94,8 @@ function Form({type, toppings, setOrders}) {
             
             <input type="submit" name="submit" value="Order Now" style={{"font-weight": "bold"}}>
             </input>
-
         </form>
-
     </div>
-    
     );
 }
 

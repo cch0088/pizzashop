@@ -96,6 +96,23 @@
         "pepperoni"
       ],
       "id": 1
+    },
+    {
+      "name": "",
+      "type": "plain",
+      "toppings": [
+        "cheese"
+      ],
+      "id": 2
+    },
+    {
+      "name": "",
+      "type": "pepperoni",
+      "toppings": [
+        "cheese",
+        "pepperoni"
+      ],
+      "id": 3
     }
   ]
 }
