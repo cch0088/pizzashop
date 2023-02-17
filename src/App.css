@@ -354,7 +354,7 @@ body {
 }
 .homie {
   color:yellow;
-  font-size: 200px;
+  font-size: calc(24px + 2vmin);
   animation: welcome 2s linear infinite;
 
 }
@@ -363,4 +363,13 @@ body {
   50% {
     color: cyan;
   }
+}
+
+.description {
+  background-color: black;
+  display: inline-block;
+  border-radius: 40%;
+  font-size: calc(20px + 2vmin);
+  padding: 50px;
+  
 }
