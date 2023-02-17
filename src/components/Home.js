@@ -7,7 +7,7 @@ function Home () {
             <h3>WELCOME TO OUR COOL PIZZA SHOP</h3>
             <div className="description">
                 <p>PIZZA SHOP is your new friend in town.
-                    We make your pizza ordoring hustle and headache free.
+                    We make your pizza ordering hustle and headache free.
                     Our website is designed to make the process of your online pizza ordering and delivery exciting.
                     PIZZA SHOP gives you a variety of options to customize your own pizza.</p>
             </div>
