@@ -20,21 +20,20 @@ code {
 } 
 
 
-#horz-list{
+#horz-list {
   display: flex;
   justify-content: center;
-  margin-top: 180px;
   padding: 0;
   text-align: center;
+  background-color:rgba(6, 7, 7, 0.8);
 }
 
 #horz-list ul li {
-  padding: 50px;
+  padding: 2px;
   color: yellowgreen;
   font-weight: bold;
   list-style-type: none;
-  font-size: 20px;
-  background-color:rgba(214, 249, 249, 0.1);
+  font-size: calc(12px + 2vmin);
 }
 
 
