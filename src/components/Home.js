@@ -9,7 +9,7 @@ function Home () {
                 <p>Pizzashop is your new friend in town.
                     We make your pizza ordoring hussle and headache free.
                     Our website is designed to make the process of your online pizza ordering and delivery exciting.
-                    PIZZASHOP gives you a variety of options to customize your own pizza.</p>
+                    PIZZA SHOP gives you a variety of options to customize your own pizza.</p>
             </div>
         
         </div>
