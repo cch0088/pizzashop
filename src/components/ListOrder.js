@@ -10,7 +10,7 @@ function ListOrder({type, toppings, id}) {
                         return <li key={index}>{topping.charAt(0).toUpperCase() + topping.slice(1)}</li>})}
                     </ul>
                 </div>
-                <div className="center">#{id}</div>
+                <div className="center">{(!id ? "Order pending" : "Order #" + id)}</div>
             </div>
         </div>
     )
