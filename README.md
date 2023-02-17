@@ -22,6 +22,6 @@ It is possible to add additional toppings but not additional pizza styles.
 
 # Credits
 
-Elisabeth Aka
-Emily Halperin
-Constantine Cherkashyn
+- Elisabeth Aka
+- Emily Halperin
+- Constantine Cherkashyn
