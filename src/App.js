@@ -16,8 +16,8 @@ import './App.css';
 
 function App() {
 
-  const API = "http://localhost:3000/pizzas";
-  const API_T = "http://localhost:3000/toppings";
+  const API = "https://my-json-server.typicode.com/cch0088/pizzashop/pizzas";
+  const API_T = "https://my-json-server.typicode.com/cch0088/pizzashop/toppings";
 
   const [pizzas, setPizzas] = useState([]);
   const [allToppings, setAllToppings] = useState([]);
@@ -41,7 +41,7 @@ function App() {
   },[])
 
   useEffect(() => {
-    fetch('http://localhost:3000/orders')
+    fetch('https://my-json-server.typicode.com/cch0088/pizzashop/orders')
     .then(r => r.json())
     .then(data => setOrders(data))
 
